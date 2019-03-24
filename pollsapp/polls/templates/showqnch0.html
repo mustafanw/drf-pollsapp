@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Records</title>
+     {% load staticfiles %}
+     <link href="home.html" rel="import" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+        <th>Question ID</th>
+        <th>Question Text</th>
+        <th>Choice Text</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for ch in choice %}
+    <tr>
+
+
+        <td>{{ ch.id }}</td>
+        <td>{{ ch.question }}</td>
+        <td>{{ ch.choice_text }}</td>
+
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+
+</body>
+</html>
